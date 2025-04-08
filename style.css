@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+body {
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #f4609b;
+    color: white;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin-left: 30px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+.intro{
+    max-width: 1100px;
+    margin: 40px auto;
+    background-color: #f0f0f0;
+    padding: 50px;
+    border-radius: 10px;
+}
+.intro h1 {
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.search {
+    display: flex;
+    margin-top: 20px;
+}
+
+.search-bar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 30px;
+    padding: 15px 20px;
+    margin-right: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    font-size: 16px;
+    margin-left: 10px;
+    outline: none;
+}
+
+.button {
+    background-color: #f4609b;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.categories {
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.categories h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #333;
+}
+
+.restaurants-section {
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.restaurants-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.restaurants-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.rcard {
+    background-color: white;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.rcard:hover {
+    transform: translateY(-5px);
+}
+
+.rimage {
+    height: 150px;
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-position: center;
+}
+
+.info {
+    padding: 20px;
+}
+
+.resname {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.restaurant-meta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.restaurant-type {
+    font-size: 14px;
+    color: #666;
+}
+
+.restaurant-rating {
+    font-size: 14px;
+    color: #ff5a5f;
+}
+
+.foot{
+    background-color: #f4609b;
+    color: white;
+    padding: 30px 50px;
+    margin-top: 40px;
+}
+footer {
+    background-color: #212529;
+    color: white;
+    padding: 40px 0;
+    margin-top: 50px;
+  }
+  
+.footer-container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 30px;
+}
+
+.footer-col h4 {
+margin-bottom: 20px;
+font-size: 18px;
+}
+
+.footer-col ul {
+list-style: none;
+}
+
+.footer-col ul li {
+margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+color: #adb5bd;
+text-decoration: none;
+transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+color: white;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .restaurants-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .restaurants-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .intro h1 {
+        font-size: 32px;
+    }
+    
+    .search {
+        flex-direction: column;
+    }
+    
+    .search-bar {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}

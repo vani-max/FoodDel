@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #f8f9fa;
+    color: #212529;
+  }
+  
+  header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    font-weight: 700;
+    font-size: 24px;
+    color: #f4609b;
+  }
+  
+  .search-bar {
+    flex-grow: 1;
+    margin: 0 20px;
+  }
+  
+  .search-bar input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+  }
+  
+  .nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #212529;
+    font-weight: 500;
+  }
+  
+  .start {
+    height: 250px;
+    background-image: url('/api/placeholder/1200/250');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .restaurant-info {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: -50px auto 0;
+    padding: 20px;
+    max-width: 1100px;
+    position: relative;
+  }
+  
+  .restaurant-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+  
+  .restaurant-title h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+  }
+  
+  .restaurant-meta {
+    display: flex;
+    align-items: center;
+    color: #6c757d;
+    font-size: 14px;
+  }
+  
+  .restaurant-meta span {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .restaurant-meta i {
+    margin-right: 5px;
+  }
+  
+  .rating {
+    color: #ff9800;
+    font-weight: bold;
+  }
+  
+  .order-btn {
+    background-color: #f4609b;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .order-btn:hover {
+    background-color: #f4609b;
+  }
+  
+  .category-tabs {
+    display: flex;
+    margin: 20px 0;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .tab {
+    padding: 12px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    font-weight: 500;
+  }
+  
+  .tab.active {
+    border-bottom: 3px solid #f4609b;
+    color: #f4609b;
+  }
+  
+  .menu-section {
+    margin-bottom: 30px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .menu-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  .menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .item-image {
+    height: 180px;
+    background-image: url('/api/placeholder/300/180');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .item-info {
+    padding: 15px;
+  }
+  
+  .item-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  .item-title h3 {
+    font-size: 16px;
+  }
+  
+  .item-price {
+    color: #f4609b;
+    font-weight: bold;
+  }
+  
+  .item-description {
+    color: #6c757d;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .add-to-cart {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    color: #212529;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #f4609b;
+    color: white;
+    border-color: #f4609b;
+  }
+  
+  .cart-summary {
+    position: sticky;
+    top: 100px;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .cart-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .cart-items {
+    margin-bottom: 20px;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .cart-item-name {
+    flex-grow: 1;
+  }
+  
+  .cart-item-price {
+    font-weight: 500;
+  }
+  
+  .cart-totals {
+    border-top: 1px solid #dee2e6;
+    padding-top: 15px;
+  }
+  
+  .cart-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .checkout-btn {
+    background-color: #f4609b;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #f4609b;
+  }
+  
+  .content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    gap: 20px;
+  }
+  
+  footer {
+    background-color: #212529;
+    color: white;
+    padding: 40px 0;
+    margin-top: 50px;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  
+  .footer-col h4 {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  
+  .footer-col ul {
+    list-style: none;
+  }
+  
+  .footer-col ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-col ul li a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-col ul li a:hover {
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .content-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .footer-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .menu-items {
+      grid-template-columns: 1fr;
+    }
+    
+    .restaurant-header {
+      flex-direction: column;
+    }
+    
+    .restaurant-header .order-btn {
+      margin-top: 15px;
+    }
+  }

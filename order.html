@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order</title>
+    <link rel="stylesheet" href="./order.css">
+</head>
+<body>
+    
+    <div class="header">
+        <h1>My Orders</h1>
+        <div class="add-button">+</div>
+    </div>
+
+    <div class="tabs">
+        <div class="tab active">Active</div>
+        <div class="tab">Past</div>
+        <div class="tab">Upcoming</div>
+    </div>
+
+    <div class="orders-container">
+        <div class="order-card">
+        <div class="order-header">
+            <div class="order-number">Order #12345</div>
+            <div class="in-progress">In Progress</div>
+        </div>
+        <div class="restaurant-info">
+            <div class="restaurant-logo">🍔</div>
+            <div class="restaurant-details">
+            <h3>Burger Palace</h3>
+            <p>2 items • INR 100</p>
+            </div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar">
+            <div class="progress-fill half"></div>
+            </div>
+            <div class="progress-steps">
+            <div class="step">
+                <div class="step-dot step-completed"></div>
+                <div class="step-label">Order Placed</div>
+            </div>
+            <div class="step">
+                <div class="step-dot step-completed"></div>
+                <div class="step-label">Preparing</div>
+            </div>
+            <div class="step">
+                <div class="step-dot step-pending"></div>
+                <div class="step-label">On the way</div>
+            </div>
+            <div class="step">
+                <div class="step-dot step-pending"></div>
+                <div class="step-label">Delivered</div>
+            </div>
+            </div>
+        </div>
+        <div class="order-footer">
+            <div class="eta">Estimated delivery: 20-30 min</div>
+            <button class="track-button">Track</button>
+        </div>
+        </div>
+
+        <div class="order-card">
+        <div class="order-header">
+            <div class="order-number">Order #12346</div>
+            <div class="on-the-way">On the way</div>
+        </div>
+        <div class="restaurant-info">
+            <div class="restaurant-logo">🍕</div>
+            <div class="restaurant-details">
+            <h3>Pizza Heaven</h3>
+            <p>3 items • INR 300</p>
+            </div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar">
+            <div class="progress-fill almost"></div>
+            </div>
+            <div class="progress-steps">
+            <div class="step">
+                <div class="step-dot step-completed green"></div>
+                <div class="step-label">Order Placed</div>
+            </div>
+            <div class="step">
+                <div class="step-dot step-completed green"></div>
+                <div class="step-label">Preparing</div>
+            </div>
+            <div class="step">
+                <div class="step-dot step-completed green"></div>
+                <div class="step-label">On the way</div>
+            </div>
+            <div class="step">
+                <div class="step-dot step-pending"></div>
+                <div class="step-label">Delivered</div>
+            </div>
+            </div>
+        </div>
+        <div class="order-footer">
+            <div class="eta">Arriving in: 10-15 min</div>
+            <button class="track-button green">Track</button>
+        </div>
+        </div>
+    </div>
+
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search orders...">
+        <span class="search-icon">🔍</span>
+    </div>
+
+    <div class="filters">
+        <div class="filter active">Today</div>
+        <div class="filter">Last Week</div>
+        <div class="filter">Last Month</div>
+    </div>
+</body>
+</html>
